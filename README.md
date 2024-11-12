@@ -22,7 +22,7 @@ The architecture of Kuber Bank Conversation AI consists of the following compone
 - **Backend Integration**: The AI is integrated with the bank's backend systems to access real-time data and perform transactions.
 - **User Interface (UI)**: The chatbot interface is designed to be user-friendly and accessible across multiple platforms, including web and mobile.
 
-[Flow](/Business_flow.png)
+![Flow](/Business_flow.png)
 
 ### Technologies Used
 - **Natural Language Processing (NLP)**: The AI uses NLP techniques to understand and process customer queries.
