@@ -4,19 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuber Bank Virtual Assistant</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+        }
+        
         .chat-container {
             height: 600px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
+        
         .feature-card {
             transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
+        
         .feature-card:hover {
             transform: translateY(-5px);
+        }
+        
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        .stats-card {
+            background: linear-gradient(45deg, var(--primary-color), #0056b3);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-card {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
         }
     </style>
 </head>
@@ -24,7 +64,23 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="#">Kuber Bank AI</a>
+            <a class="navbar-brand" href="#"><i class="fas fa-robot me-2"></i>Kuber Bank AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#statistics">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -32,10 +88,21 @@
     <div class="container my-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h1 class="display-4">Welcome to Kuber Bank</h1>
-                <p class="lead">Your 24/7 AI-powered banking assistant</p>
+                <h1 class="display-4 fw-bold">Welcome to Kuber Bank</h1>
+                <p class="lead mb-4">Your intelligent 24/7 AI-powered banking assistant ready to help with all your financial needs</p>
+                <p class="mb-4">Our AI assistant can help you with:</p>
+                <ul class="mb-4">
+                    <li>Checking your account details</li>
+                    <li>Managing your debit cards</li>
+                    <li>Applying for loans</li>
+                    <li>Exploring exclusive offers</li>
+                    <li>And much more!</li>
+                </ul>
+                <button class="btn btn-primary btn-lg me-3">Get Started</button>
+                <button class="btn btn-outline-primary btn-lg">Learn More</button>
             </div>
             <div class="col-lg-6">
+                <img src="path/to/your/image.jpg" alt="Kuber Bank AI" class="img-fluid mb-4">
                 <div class="chat-container">
                     <iframe 
                         src="https://copilotstudio.microsoft.com/environments/Default-90a6102b-e79d-4186-9e42-c1f57d090757/bots/craa6_moneyKuberBankVirtualAssist/webchat?__version__=2" 
@@ -47,31 +114,113 @@
         </div>
     </div>
 
+    <!-- Statistics Section -->
+    <div id="statistics" class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="stats-card text-center">
+                    <i class="fas fa-users fa-3x mb-3"></i>
+                    <h3>1M+</h3>
+                    <p>Active Users</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stats-card text-center">
+                    <i class="fas fa-exchange-alt fa-3x mb-3"></i>
+                    <h3>₹10B+</</h3>
+                    <p>Transactions Processed</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stats-card text-center">
+                    <i class="fas fa-clock fa-3x mb-3"></i>
+                    <h3>99.9%</h3>
+                    <p>Uptime</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Features Section -->
-    <div class="container my-5">
-        <h2 class="text-center mb-4">Key Features</h2>
+    <div id="features" class="container my-5">
+        <h2 class="text-center mb-5">Key Features</h2>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card feature-card h-100">
-                    <div class="card-body">
+                    <div class="card-body text-center">
+                        <div class="icon-circle">
+                            <i class="fas fa-clock fa-2x"></i>
+                        </div>
                         <h5 class="card-title">24/7 Availability</h5>
-                        <p class="card-text">Access banking services anytime, anywhere</p>
+                        <p class="card-text">Access banking services anytime, anywhere with our always-on virtual assistant</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card feature-card h-100">
-                    <div class="card-body">
+                    <div class="card-body text-center">
+                        <div class="icon-circle">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
                         <h5 class="card-title">Secure Transactions</h5>
-                        <p class="card-text">Industry-standard security protocols</p>
+                        <p class="card-text">Bank confidently with our industry-leading security protocols</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card feature-card h-100">
-                    <div class="card-body">
+                    <div class="card-body text-center">
+                        <div class="icon-circle">
+                            <i class="fas fa-robot fa-2x"></i>
+                        </div>
                         <h5 class="card-title">Smart Assistant</h5>
-                        <p class="card-text">AI-powered responses to all your queries</p>
+                        <p class="card-text">Get instant, AI-powered responses to all your banking queries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div id="testimonials" class="container my-5">
+        <h2 class="text-center mb-5">What Our Customers Say</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p class="mb-3">The AI assistant has made banking so much easier. I get instant responses to all my queries!</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Customer">
+                        <div>
+                            <h6 class="mb-0">Rahul Sharma</h6>
+                            <small class="text-muted">Business Owner</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p class="mb-3">24/7 availability means I can bank at my convenience. Great service!</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Customer">
+                        <div>
+                            <h6 class="mb-0">Priya Singh</h6>
+                            <small class="text-muted">Student</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p class="mb-3">The security features give me peace of mind while banking online.</p>
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Customer">
+                        <div>
+                            <h6 class="mb-0">Amit Patel</h6>
+                            <small class="text-muted">Professional</small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,8 +229,29 @@
 
     <!-- Footer -->
     <footer class="bg-light py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">© 2023 Kuber Bank. All rights reserved.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Kuber Bank AI</h5>
+                    <p>Your trusted AI banking partner</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#statistics">Statistics</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: support@kuberbank.com<br>Phone: 1-800-KUBER-AI</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">© 2023 Kuber Bank. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
